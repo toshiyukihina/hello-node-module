@@ -1,6 +1,6 @@
 {
   "name": "hello-node-module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hello node package",
   "main": "lib/index.js",
   "private": false,
