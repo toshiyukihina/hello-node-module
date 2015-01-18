@@ -68,5 +68,4 @@ node_modules
 npm-debug.log
 
 *.tgz
-*.coffee
 *.js
