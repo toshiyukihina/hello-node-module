@@ -14,11 +14,11 @@ module.exports = (grunt) ->
         tasks: ['coffee', 'jshint']
     coffee:
       compile:
-        files: [{
+        files: [
           expand: true,
           src: ['./{,*/}*.coffee']
           ext: '.js'
-        }]
+        ]
   )
 
   # These plugins provide necessary tasks.
