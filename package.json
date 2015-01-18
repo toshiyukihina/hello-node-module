@@ -13,5 +13,13 @@
   "license": "MIT",
   "devDependencies": {
     "tape": "^3.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toshiyukihina/hello-node-module.git"
+  },
+  "keywords": [
+    "hello",
+    "package"
+  ]
 }
