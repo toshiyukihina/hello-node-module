@@ -2,7 +2,7 @@
   "name": "hello-node-module",
   "version": "0.0.1",
   "description": "Hello node package",
-  "main": "index.js",
+  "main": "lib/index.js",
   "private": false,
   "directories": {
     "test": "test"

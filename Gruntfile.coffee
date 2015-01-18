@@ -6,19 +6,26 @@ module.exports = (grunt) ->
     jshint:
       options:
         jshintrc: '.jshintrc'
-      all:
-        src: './{,*/}*.js'
+      all: ['lib/**/*.js', 'test/**/*.js']
     watch:
       coffee:
-        files: './{,*/}*.coffee'
+        files: ['src/*.coffee', 'test/*.coffee']
         tasks: ['coffee', 'jshint']
     coffee:
       compile:
-        files: [
-          expand: true,
-          src: ['./{,*/}*.coffee']
+        files: [{
+          expand: true
+          cwd: 'src/'
+          src: ['**/*.coffee']
+          dest: 'lib/'
           ext: '.js'
-        ]
+        }, {
+          expand: true
+          cwd: 'test/'
+          src: ['**/*.coffee']
+          dest: 'test/'
+          ext: '.js'
+        }]
   )
 
   # These plugins provide necessary tasks.
