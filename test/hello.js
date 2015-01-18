@@ -1,18 +1,25 @@
-var hello = require('../');
-var test = require('tape');
+(function() {
+  var hello, test;
 
-test('say', function(t) {
-  var en = hello('en').say();
-  t.equal(en, 'Hello!');
+  hello = require('../');
 
-  var ja = hello('ja').say();
-  t.equal(ja, 'こんにちわ！');
+  test = require('tape');
 
-  var unknown = hello('unknown').say();
-  t.equal(en, unknown);
+  test('say', function(t) {
+    var en, ja, undef, unknown;
+    en = hello('en').say();
+    t.equal(en, 'Hello John Doe!');
+    en = hello('en').say('Tom');
+    t.equal(en, 'Hello Tom!');
+    ja = hello('ja').say();
+    t.equal(ja, 'こんにちわ、名無しさん！');
+    ja = hello('ja').say('やまだ');
+    t.equal(ja, 'こんにちわ、やまださん！');
+    unknown = hello('unknown').say();
+    t.equal(unknown, 'Hello John Doe!');
+    undef = hello().say();
+    t.equal(undef, 'Hello John Doe!');
+    return t.end();
+  });
 
-  var undef = hello().say();
-  t.equal(en, undef);
-
-  t.end();
-});
+}).call(this);
