@@ -1,0 +1,17 @@
+{
+  "name": "hello-node-package",
+  "version": "0.0.1",
+  "description": "Hello node package",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "author": "thina",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^3.2.0"
+  }
+}
